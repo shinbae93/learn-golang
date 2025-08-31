@@ -1,4 +1,4 @@
-# Go CLI Commands
+# ⚡ Go CLI Commands
 
 The Go CLI provides several commands to build, run, format, install, fetch, and test Go programs. Below are the most commonly used commands:
 
