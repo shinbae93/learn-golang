@@ -29,6 +29,9 @@ var score = 100 // score is int
 
 ### 1.3 Short Declaration (`:=`)
 
+> **Note:** Short declaration (`:=`) must be used **inside functions**.  
+> At the package level, you can only use `const` and `var` declarations.
+
 Inside functions, you can use `:=` for quick variable declaration and initialization:
 
 ```go
