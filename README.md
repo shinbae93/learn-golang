@@ -10,7 +10,6 @@ It's split into two main parts:
 
 ```
 golang-course/
-│
 ├── docs/      # Markdown notes
 ├── examples/  # Small code snippets per lesson
 ├── projects/  # Larger practice apps
