@@ -115,7 +115,41 @@ greet := func(name string) {
 greet("Go")
 ```
 
-### 6. Functions as First-Class Citizens
+### 6. Function Declaration Order
+
+**Important:** In Go, function definitions can appear in any order within a package. Unlike some other languages, Go doesn't require functions to be declared before they are used.
+
+```go
+package main
+
+import "fmt"
+
+func main() {
+    // We can call greet() even though it's defined after main()
+    greet()
+
+    // We can call calculate() which calls multiply()
+    // even though multiply() is defined later
+    result := calculate(4, 5)
+    fmt.Println("Result:", result)
+}
+
+func greet() {
+    fmt.Println("Hello from greet function!")
+}
+
+func calculate(a, b int) int {
+    return multiply(a, b) + 10
+}
+
+func multiply(x, y int) int {
+    return x * y
+}
+```
+
+This flexibility allows you to organize your code in a way that makes logical sense, rather than being constrained by declaration order.
+
+### 7. Functions as First-Class Citizens
 
 In Go, functions are **first-class citizens**. This means:
 
