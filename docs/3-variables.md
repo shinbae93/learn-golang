@@ -73,6 +73,19 @@ const Greeting = "Hello"
 
 - **Global:** Declared outside functions, accessible everywhere in the package.
 - **Local:** Declared inside functions, accessible only within that function.
+- **Block:** Variables are block-scoped in Go. Variables declared within `{}` blocks (like if statements, for loops, or any code block) are only accessible within that block.
+
+````go
+func example() {
+    x := 10 // function scope
+
+    if x > 5 {
+        y := 20 // block scope - only accessible within this if block
+        fmt.Println(x, y) // both x and y are accessible here
+    }
+
+    // fmt.Println(y) // Error: y is not accessible here
+}
 
 ## 5. Example
 
@@ -88,7 +101,7 @@ func main() {
 
     fmt.Println(language, version, creator)
 }
-```
+````
 
 ## 6. Summary
 
